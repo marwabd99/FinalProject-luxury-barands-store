@@ -1,0 +1,151 @@
+/* עיצוב כללי */
+.checkout-container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  direction: rtl;
+}
+
+.checkout-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #222;
+  font-size: 1.8rem;
+}
+
+/* הודעת שגיאה */
+.error {
+  background: #ffe5e5;
+  color: #d32f2f;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* טופס */
+.checkout-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.checkout-form label {
+  font-weight: 500;
+  color: #333;
+}
+
+.checkout-form input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.checkout-form input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.3);
+}
+
+/* אמצעי תשלום */
+.payment-section {
+  margin-top: 20px;
+}
+
+.payment-section h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #444;
+}
+
+.payment-options {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.payment-options label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 18px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background: #f9f9f9;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+  flex: 1;
+  justify-content: center;
+  text-align: center;
+}
+
+.payment-options label:hover {
+  background: #eef4ff;
+  border-color: #007bff;
+}
+
+.payment-options input[type="radio"] {
+  accent-color: #007bff;
+  transform: scale(1.2);
+}
+
+/* כפתור שליחה */
+.submit-btn {
+  margin-top: 20px;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #007bff, #0056d2);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 123, 255, 0.25);
+}
+
+.submit-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* רספונסיביות */
+@media (max-width: 600px) {
+  .checkout-container {
+    padding: 15px;
+  }
+
+  .payment-options {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .payment-options label {
+    justify-content: flex-start;
+  }
+}.card-info,
+.paypal-info {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  /* עכשיו אנכי */
+  gap: 10px;
+}
+
+.card-info input,
+.paypal-info input {
+  width: 100%;
+  /* כל שדה תופס את רוחב המכולה */
+}

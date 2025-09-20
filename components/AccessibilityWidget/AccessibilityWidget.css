@@ -1,0 +1,130 @@
+/* כפתור פתיחה קבוע */
+.accessibility-button {
+    position: fixed;
+    bottom: 25px;
+    left: 25px;
+    z-index: 999;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background: linear-gradient(135deg, #c0bbb4, #7291b9);
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.accessibility-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* פאנל אפשרויות */
+.accessibility-panel {
+    position: fixed;
+    bottom: 100px;
+    left: 25px;
+    z-index: 998;
+    width: 280px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    font-family: "Arial", sans-serif;
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.9);
+    animation: slideIn 0.3s ease-out;
+}
+
+/* אנימציית פתיחה */
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* כל סקשן בפאנל */
+.accessibility-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+/* כפתורים קטנים */
+.accessibility-section button {
+    border: none;
+    border-radius: 6px;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+
+.accessibility-section button:hover {
+    background-color: #eee;
+}
+
+/* כפתור קריינות */
+.speech-button {
+    width: 100%;
+    padding: 8px 0;
+    border-radius: 8px;
+    border: none;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.speech-button:hover {
+    transform: scale(1.03);
+}
+
+/* כפתור איפוס */
+.reset-button {
+    width: 100%;
+    padding: 8px 0;
+    border-radius: 8px;
+    border: none;
+    background: linear-gradient(135deg, #f85032, #e73827);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.reset-button:hover {
+    transform: scale(1.03);
+}
+
+/* מצב כהה */
+body.dark-mode {
+    background-color: #1f1f1f;
+    color: #f0f0f0;
+}
+
+/* גופן נגיש */
+body.accessible-font {
+    font-family: "Arial", "Helvetica", sans-serif;
+    letter-spacing: 0.5px;
+}
+
+/* עצירת אנימציות */
+body.reduce-motion * {
+    transition: none !important;
+    animation: none !important;
+}

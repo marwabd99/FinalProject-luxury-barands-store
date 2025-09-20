@@ -1,0 +1,53 @@
+.orders-container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.orders-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.orders-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.order-card {
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.order-card h3 {
+    margin: 0 0 10px;
+    color: #444;
+}
+
+.order-products {
+    margin-top: 10px;
+    padding-left: 15px;
+}
+
+.order-product {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #eee;
+    padding: 5px 0;
+}
+
+.shipping-info {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #555;
+}
+
+.error {
+    color: red;
+    text-align: center;
+}

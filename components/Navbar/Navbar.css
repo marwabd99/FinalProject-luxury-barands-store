@@ -1,0 +1,180 @@
+/* === סרגל עליון (NAVBAR) === */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #001f4d, #003366);
+    padding: 10px 20px;
+    font-family: "Advent Pro", sans-serif;
+    position: relative;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+    direction: rtl;
+    z-index: 1000;
+}
+
+/* === צד ימין: לוגו + כפתור המבורגר === */
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* === Hamburger Icon === */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 6px;
+    z-index: 1101;
+    /* מעל התפריט */
+}
+
+.hamburger span {
+    width: 32px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 3px;
+    transition: 0.4s;
+}
+
+.hamburger.open span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* === לוגו === */
+.navbar-logo a {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.navbar-logo a:hover {
+    color: #e2a243;
+}
+
+/* === צד שמאל: התחברות ועגלה === */
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* התחברות */
+.auth-link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.3s;
+    cursor: pointer;
+}
+
+.auth-link:hover {
+    color: #ffa500;
+}
+
+/* === עגלה === */
+.cart-link {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* === תפריט Hamburger (Sidebar) === */
+.navbar-links {
+    background-color: #00264d;
+    height: 100vh;
+    width: 250px;
+    position: fixed;
+    top: 30px;
+    /* מתחיל מתחת ל-NAVBAR */
+    right: -300px;
+    /* מוסתר מחוץ למסך */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+    font-size: 18px;
+    list-style: none;
+    border-radius: 0 0 0 10px;
+    transition: right 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+}
+
+/* כשהתפריט פעיל */
+.navbar-links.active {
+    right: 0;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* קישורים בתוך התפריט */
+.navbar-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s;
+}
+
+.navbar-links li a:hover {
+    color: #ffa500;
+}
+
+/* === ריספונסיבי === */
+@media (max-width: 1024px) {
+    .navbar-links {
+        width: 70%;
+        border-radius: 0;
+        padding-top: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-left {
+        display: none;
+        /* מסתירים התחברות + עגלה במובייל */
+    }
+
+    .navbar-links {
+        width: 100%;
+        /* תפריט מלא מסך */
+        top: 0;
+        padding-top: 100px;
+    }
+}
+
+/* === כפתור התנתקות === */
+.logout-btn {
+    background: transparent;
+    border: none;
+    color: #e63946;
+    /* אדום בולט */
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: color 0.3s ease;
+}
+
+.logout-btn:hover {
+    color: #a4161a;
+    /* אדום כהה יותר */
+}

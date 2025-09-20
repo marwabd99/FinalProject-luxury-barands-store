@@ -1,0 +1,134 @@
+.contact-container {
+    max-width: 600px;
+    /* רוחב מקסימלי לקונטיינר, כדי לא להיות רחב מדי במסכים גדולים */
+    margin: 40px auto;
+    /* שוליים עליונים ותחתונים של 40 פיקסלים, ומרכז אופקי (אוטומטי) */
+    padding: 20px;
+    /* ריווח פנימי של 20 פיקסלים מכל הכיוונים */
+    font-family: Arial, sans-serif;
+    /* גופן הפונט של הטקסט */
+    direction: rtl;
+    text-align: right;
+    /* יישור הטקסט לימין */
+    color: #000;
+}
+
+.contact-title {
+    color: #335C81;
+    text-align: center;
+    /* יישור הטקסט למרכז */
+    margin-bottom: 20px;
+    /* רווח תחתון בין הכותרת לתוכן שמתחת */
+    font-size: 2rem;
+    /* גודל גופן גדול יחסית */
+}
+
+.contact-container p {
+    margin-bottom: 16px;
+    /* רווח תחתון בין פסקאות */
+    line-height: 1.5;
+    /* גובה שורות נוח לקריאה */
+    font-size: 1.1rem;
+    /* גודל גופן מעט גדול מהרגיל */
+}
+
+.contact-form label {
+    display: block;
+    /* תצוגה כחסימה (כדי שכל תווית תופסת שורה נפרדת) */
+    margin-bottom: 12px;
+    /* רווח מתחת לתווית */
+    font-weight: 600;
+    /* עובי גופן בינוני-כבד */
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    /* שדה קלט תופס את כל רוחב ההורה */
+    padding: 10px;
+    /* ריווח פנימי בתוך השדות */
+    margin-top: 6px;
+    /* רווח קטן מעל השדה (מתחת לתווית) */
+    border: 1px solid #ccc;
+    /* גבול דק בצבע אפור בהיר */
+    border-radius: 4px;
+    /* פינות מעוגלות קלות */
+    font-size: 1rem;
+    /* גודל גופן סטנדרטי */
+    box-sizing: border-box;
+    /* כולל ריווח וגבולות בחישוב הרוחב */
+    resize: vertical;
+    /* אפשרות לשנות גובה (רק טקסט אריאס), לא רוחב */
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #335C81;
+    outline: none;
+    /* מסיר את המסגרת החיצונית הדיפולטיבית */
+}
+
+.contact-form button {
+    background-color: #335C81;
+    color: white;
+    padding: 12px 24px;
+    /* ריווח פנימי אנכי ואופקי */
+    border: none;
+    /* ללא גבול */
+    border-radius: 4px;
+    /* פינות מעוגלות */
+    cursor: pointer;
+    /* סמן עכבר משתנה ליד (מעיד על לחיצות) */
+    font-size: 1.1rem;
+    /* גודל טקסט מעט גדול */
+    font-weight: 600;
+    /* עובי גופן בינוני-כבד */
+    transition: background-color 0.3s ease;
+    /* אפקט שינוי צבע רקע חלק */
+    margin-top: 10px;
+    /* רווח מעל הכפתור */
+    display: block;
+    /* הכפתור תופס שורה נפרדת */
+    width: 100%;
+    /* הכפתור תופס את כל רוחב הקונטיינר */
+}
+
+.contact-form button:hover {
+    background-color: #274e6b;
+}
+
+/* רספונסיביות - התאמה למסכים קטנים */
+@media (max-width: 480px) {
+    .contact-container {
+        margin: 20px 10px;
+        /* שוליים קטנים יותר */
+        padding: 16px;
+        /* ריווח פנימי קטן יותר */
+    }
+
+    .contact-title {
+        font-size: 1.6rem;
+        /* גודל כותרת קטן יותר */
+    }
+
+    .contact-container p,
+    .contact-form label {
+        font-size: 1rem;
+        /* גודל טקסט תקני לטלפונים */
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 0.9rem;
+        /* גודל טקסט קטן יותר בשדות */
+        padding: 8px;
+        /* ריווח פנימי קטן יותר */
+    }
+
+    .contact-form button {
+        font-size: 1rem;
+        /* גודל טקסט קטן יותר בכפתור */
+        padding: 10px 0;
+        /* ריווח אנכי בלבד */
+    }
+}

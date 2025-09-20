@@ -1,0 +1,131 @@
+/* שינוי שם הקובץ מ-SignUp.css ל-Register.css */
+.auth-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+}
+
+.auth-box {
+    width: 350px;
+    background: #ffffff;
+    height: 100%;
+    padding: 30px;
+    box-shadow: -4px 0 15px rgba(0, 0, 0, 0.2);
+    animation: slideIn 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    /* מאפשר מיקום מוחלט של הכפתור */
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    color: #001f4d;
+    /* כחול תואם לעיצוב הקיים */
+    padding: 0;
+    margin: 0;
+    outline: none;
+}
+
+.close-btn:hover {
+    color: #ff0000;
+    /* אדום בעת מעבר עכבר */
+}
+
+.auth-box h2 {
+    margin-bottom: 60px;
+    text-align: center;
+    font-size: 24px;
+    /* שיפור קריאות */
+    color: #001f4d;
+    /* תיאום צבע לכותרת */
+}
+
+.auth-box form {
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-box input {
+    margin: 10px 0;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 15px;
+    transition: border-color 0.3s;
+    /* אנימציה קלה לשינוי גבול */
+}
+
+.auth-box input:focus {
+    border-color: #001f4d;
+    /* הדגשה כחולה כשהשדה פעיל */
+    outline: none;
+    /* הסרת קו מתאר ברירת מחדל */
+}
+
+.auth-box button {
+    margin-top: 15px;
+    padding: 12px;
+    background: #001f4d;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    /* אנימציה לשינוי צבע והרמה */
+}
+
+.auth-box button:hover {
+    background: #003366;
+    transform: translateY(-2px);
+    /* הרמה קלה בעת מעבר עכבר */
+}
+
+.auth-box button:disabled {
+    background: #cccccc;
+    /* צבע אפור כשהכפתור מושבת */
+    cursor: not-allowed;
+}
+
+.switch-auth {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    /* צבע טקסט רך יותר */
+}
+
+.switch-auth .link {
+    color: #dfe1e4;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.switch-auth .link:hover {
+    text-decoration: underline;
+    color: #ffffff;
+    /* תיאום צבע למעבר עכבר */
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}

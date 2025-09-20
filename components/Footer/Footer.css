@@ -1,0 +1,142 @@
+איפוס כללי לכל האלמנטים * {
+    box-sizing: border-box;
+    /* מוודא שה-padding וה-border ייכנסו בתוך המידות של האלמנט */
+}
+
+/* עיצוב בסיסי לעמוד */
+html,
+body {
+    margin: 0;
+    /* מבטל שוליים ברירת מחדל */
+    padding: 0;
+    /* מבטל ריווח פנימי */
+    height: 100%;
+    /* גובה מלא של הדף */
+    direction: rtl;
+    font-family: Arial, sans-serif;
+}
+
+/* עיצוב עוטף ראשי */
+/*root >>index.html*/
+/*layout- מתייחס לדרך שבה האלמנטים בדף מסודרים ומונחים*/
+#root,
+.layout {
+    display: flex;
+    /* תצוגת Flex */
+    flex-direction: column;
+    /* סידור טורי של הילדים */
+    min-height: 100vh;
+    /* מינימום גובה - כל גובה הדפדפן */
+}
+
+/* תוכן עיקרי – תופס את השטח בין ההדר לפוטר */
+.main-content {
+    flex: 1;
+    /* מאפשר לתוכן להתרחב */
+}
+
+.footer {
+    width: 100%;
+    left: 0;
+    right: 0;
+    background-color: #00264d;
+    color: white;
+    padding: 15px 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+    /* מזיז את הפוטר לתחתית */
+    z-index: 1000;
+    /* מבטיח שהפוטר יהיה מעל תוכן אחר */
+}
+
+/* מיכל עוטף של תוכן הפוטר */
+.footer-container {
+    max-width: 100%;
+    /* לא לעבור את רוחב המסך */
+    margin: 0;
+    /* אין שוליים */
+    display: flex;
+    flex-wrap: wrap;
+    /* ירידה שורה כשצריך */
+    justify-content: space-between;
+    /* רווחים שווים בין פריטים */
+    align-items: center;
+    /* יישור אנכי */
+    gap: 300px;
+    /* ריווח בין קבוצות */
+}
+
+/* קבוצה של קישורים */
+.footer-links {
+    display: flex;
+    gap: 50px;
+    /* רווח בין קישורים */
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* עיצוב לכל קישור */
+.footer-link {
+    color: white;
+    /* צבע טקסט */
+    text-decoration: none;
+    /* בלי קו תחתון */
+    font-size: 1rem;
+    /* גודל טקסט רגיל */
+    font-weight: lighter;
+    /* משקל קל */
+    transition: color 0.3s ease;
+    /* אנימציה חלקה */
+}
+
+/* שינוי צבע קישור בהובר */
+.footer-link:hover {
+    color: #afafdc;
+}
+
+/* טקסט אודות החברה */
+.footer-about {
+    flex: 1 1 300px;
+    /* פריסה גמישה */
+    font-size: 14px;
+    font-weight: lighter;
+    text-align: center;
+}
+
+/* קבוצה של אייקונים חברתיים */
+.footer-social {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* עיצוב אייקון של רשת חברתית */
+.footer-img-icon {
+    width: 28px;
+    height: 28px;
+    transition: transform 0.3s ease;
+    /* אנימציית שינוי קנה מידה */
+    cursor: pointer;
+    /* סמן יד */
+}
+
+/* הגדלה קלה של האייקון בהובר */
+.footer-img-icon:hover {
+    transform: scale(1.1);
+    /* הגדלה של 10% */
+}
+
+/* התאמה לעיצוב במסכים קטנים (רספונסיביות) */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        /* שינוי מיקום אנכי */
+        text-align: center;
+        /* יישור טקסט למרכז */
+    }
+}

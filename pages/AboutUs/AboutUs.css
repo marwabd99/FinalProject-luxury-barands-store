@@ -1,0 +1,35 @@
+.about-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #000000;
+    direction: rtl;
+    /* כדי לשמור על עברית */
+    text-align: center;
+    /* כל הכתב באמצע */
+}
+
+.about-title {
+    text-align: center;
+    color: #335C81;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+/* רספונסיביות */
+@media (max-width: 600px) {
+    .about-container {
+        margin: 20px 10px;
+        padding: 15px;
+    }
+
+    .about-title {
+        font-size: 1.8rem;
+    }
+
+    .about-container p {
+        font-size: 1rem;
+    }
+}
